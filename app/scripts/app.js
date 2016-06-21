@@ -1,14 +1,14 @@
 'use strict';
 /**
  * @ngdoc overview
- * @name sbAdminApp
+ * @name BCAP
  * @description
- * # sbAdminApp
+ * # BCAP
  *
  * Main module of the application.
  */
 angular
-  .module('sbAdminApp', [
+  .module('BCAP', [
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
@@ -31,7 +31,7 @@ angular
             loadMyDirectives:function($ocLazyLoad){
                 return $ocLazyLoad.load(
                 {
-                    name:'sbAdminApp',
+                    name:'BCAP',
                     files:[
                     'scripts/directives/header/header.js',
                     'scripts/directives/header/header-notification/header-notification.js',
@@ -81,12 +81,12 @@ angular
         resolve: {
           loadMyFiles:function($ocLazyLoad) {
             return $ocLazyLoad.load({
-              name:'sbAdminApp',
+              name:'BCAP',
               files:[
               'scripts/controllers/main.js',
-              'scripts/directives/timeline/timeline.js',
-              'scripts/directives/notifications/notifications.js',
-              'scripts/directives/chat/chat.js',
+              // 'scripts/directives/timeline/timeline.js',
+              // 'scripts/directives/notifications/notifications.js',
+              // 'scripts/directives/chat/chat.js',
               'scripts/directives/dashboard/stats/stats.js'
               ]
             })
@@ -119,7 +119,7 @@ angular
               ]
             }),
             $ocLazyLoad.load({
-                name:'sbAdminApp',
+                name:'BCAP',
                 files:['scripts/controllers/chartContoller.js']
             })
           }
