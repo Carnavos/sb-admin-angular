@@ -28,6 +28,7 @@ angular
         url:'/dashboard',
         templateUrl: 'views/dashboard/main.html',
         resolve: {
+            // requisites to load Dashboard root view
             loadMyDirectives:function($ocLazyLoad){
                 return $ocLazyLoad.load(
                 {
@@ -79,6 +80,7 @@ angular
         controller: 'MainCtrl',
         templateUrl:'views/dashboard/home.html',
         resolve: {
+          // reqs to load home view
           loadMyFiles:function($ocLazyLoad) {
             return $ocLazyLoad.load({
               name:'BCAP',
@@ -93,6 +95,7 @@ angular
           }
         }
       })
+      // DELETE after using forms
       .state('dashboard.form',{
         templateUrl:'views/form.html',
         url:'/form'
@@ -110,6 +113,7 @@ angular
         url:'/chart',
         controller:'ChartCtrl',
         resolve: {
+          // reqs to load chart view
           loadMyFile:function($ocLazyLoad) {
             return $ocLazyLoad.load({
               name:'chart.js',
@@ -125,34 +129,34 @@ angular
           }
         }
     })
-      .state('dashboard.table',{
-        templateUrl:'views/table.html',
-        url:'/table'
-    })
-      .state('dashboard.panels-wells',{
-          templateUrl:'views/ui-elements/panels-wells.html',
-          url:'/panels-wells'
-      })
-      .state('dashboard.buttons',{
-        templateUrl:'views/ui-elements/buttons.html',
-        url:'/buttons'
-    })
-      .state('dashboard.notifications',{
-        templateUrl:'views/ui-elements/notifications.html',
-        url:'/notifications'
-    })
-      .state('dashboard.typography',{
-       templateUrl:'views/ui-elements/typography.html',
-       url:'/typography'
-   })
-      .state('dashboard.icons',{
-       templateUrl:'views/ui-elements/icons.html',
-       url:'/icons'
-   })
-      .state('dashboard.grid',{
-       templateUrl:'views/ui-elements/grid.html',
-       url:'/grid'
-   })
+   //    .state('dashboard.table',{
+   //      templateUrl:'views/table.html',
+   //      url:'/table'
+   //  })
+   //    .state('dashboard.panels-wells',{
+   //        templateUrl:'views/ui-elements/panels-wells.html',
+   //        url:'/panels-wells'
+   //    })
+   //    .state('dashboard.buttons',{
+   //      templateUrl:'views/ui-elements/buttons.html',
+   //      url:'/buttons'
+   //  })
+   //    .state('dashboard.notifications',{
+   //      templateUrl:'views/ui-elements/notifications.html',
+   //      url:'/notifications'
+   //  })
+   //    .state('dashboard.typography',{
+   //     templateUrl:'views/ui-elements/typography.html',
+   //     url:'/typography'
+   // })
+   //    .state('dashboard.icons',{
+   //     templateUrl:'views/ui-elements/icons.html',
+   //     url:'/icons'
+   // })
+   //    .state('dashboard.grid',{
+   //     templateUrl:'views/ui-elements/grid.html',
+   //     url:'/grid'
+   // })
   }]);
 
     
